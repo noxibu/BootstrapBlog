@@ -1,1 +1,1 @@
-Learning CRUD operations with Razor Pages
+Learning CRUD operations with Razor Pages and EF

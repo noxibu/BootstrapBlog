@@ -1,0 +1,38 @@
+﻿@page
+@model BlogWeb.Pages.Employees.ListModel
+@{
+}
+
+<h1>List of Employees</h1>
+
+@if (Model.Employees != null && Model.Employees.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Employees)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Email</td>
+                    <td>
+                        <a href="/Employees/Edit/@item.Id" class="btn btn-dark">Edit</a>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No employees found</p>
+}
